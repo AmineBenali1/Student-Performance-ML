@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and Models
+data/
+models/
+
+# Environment
+.env
+.venv
+env/
+venv/
