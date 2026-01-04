@@ -66,19 +66,21 @@ def main():
     
     # Plot 1: Linear Regression
     plt.subplot(1, 2, 1)
-    plt.scatter(y_test, lr_pred, color='blue', alpha=0.5)
-    plt.plot([0, 20], [0, 20], color='red', linestyle='--')
-    plt.title('Linear Regression: Actual vs Predicted')
+    plt.scatter(y_test, lr_pred, color='blue', alpha=0.5, label='Student Prediction')
+    plt.plot([0, 20], [0, 20], color='red', linestyle='--', linewidth=2, label='Perfect Prediction (Actual = Predicted)')
+    plt.title('Linear Regression')
     plt.xlabel('Actual Grade')
     plt.ylabel('Predicted Grade')
+    plt.legend()
     
     # Plot 2: Random Forest
     plt.subplot(1, 2, 2)
-    plt.scatter(y_test, rf_pred, color='green', alpha=0.5)
-    plt.plot([0, 20], [0, 20], color='red', linestyle='--')
-    plt.title('Random Forest: Actual vs Predicted')
+    plt.scatter(y_test, rf_pred, color='green', alpha=0.5, label='Student Prediction')
+    plt.plot([0, 20], [0, 20], color='red', linestyle='--', linewidth=2, label='Perfect Prediction')
+    plt.title('Random Forest')
     plt.xlabel('Actual Grade')
     plt.ylabel('Predicted Grade')
+    plt.legend()
     
     plt.tight_layout()
     if not os.path.exists("results"):
